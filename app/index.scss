@@ -1,0 +1,6 @@
+@import "./sass/app/normalize";
+@import "~foundation-sites/scss/foundation";
+@import "./sass/app/style";
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+@include foundation-visibility-classes;
