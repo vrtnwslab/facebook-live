@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* main */
+
+.header {
+  width: 25%;
+}
+
+.aside {
+  width: 75%;
+  display: flex;
+}
+
+.section {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.footer {
+  width: 100%;
+}
+
+/* aside */
+
+.post {
+  width: 50%;
+}
+
+.page {
+  width: 50%;
+}
+
+/* section */
+
+.live {
+  width: 24%;
+}
+
+.questions {
+  width: 50%;
+}
+
+.done {
+  width: 24%;
+}

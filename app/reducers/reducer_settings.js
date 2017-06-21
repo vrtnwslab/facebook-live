@@ -1,16 +1,23 @@
 export default function reducer (
   state = {
+    realtime: true,
+    firebase: false,
+    fetched: false,
     firebaseProject: 'vrtnwslab',
     firebaseApp: 'facebooklive',
-    realtime: true,
-    fetched: null
+    newSessionName: false
   }, action) {
   switch (action.type) {
-    case 'FETCH_FILE':
     case 'FETCH_DATA_FULFILLED': {
       return {
         ...state,
         fetched: true
+      }
+    }
+    case 'START_SESSION': {
+      return {
+        ...state,
+        firebase: action.payload
       }
     }
     default: {

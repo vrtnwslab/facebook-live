@@ -1,10 +1,40 @@
 export default function reducer (
-  state = {}, action) {
+  state = {
+    name: 'Facebook Live',
+    sessions: {},
+    edit: {
+      author: 'VRTNWS',
+      question: ''
+    }
+  }, action) {
   switch (action.type) {
-    case 'FETCH_FILE':
-      return action.payload
-    case 'FETCH_DATA_FULFILLED':
-      return action.payload
+    case 'FETCH_FILE': {
+      return {
+        ...state,
+        ...action.payload
+      }
+    }
+    case 'FETCH_DATA_FULFILLED': {
+      return {
+        ...state,
+        ...action.payload
+      }
+    }
+    case 'EDIT_COMMENT': {
+      return {
+        ...state,
+        edit: action.payload
+      }
+    }
+    case 'CLEAR_QUESTION': {
+      return {
+        ...state,
+        edit: {
+          author: 'VRTNWS',
+          question: ''
+        }
+      }
+    }
     default:
       return state
   }
