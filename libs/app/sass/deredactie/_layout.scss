@@ -1,0 +1,40 @@
+html {
+  background: $nws-brand-white;
+}
+body {
+  max-width: 980px;
+  margin: auto;
+  padding: 15px;
+  background: $dr-bg;
+  color: white;
+}
+
+p {
+  font-family: roboto;
+  font-size: 14px;
+}
+
+#app__main {
+  @include grid-row;
+  header {
+    @include grid-column;
+  }
+  section {
+    @include grid-column;
+    margin-top: 30px;
+  }
+}
+
+.app__title {
+  font-family: dincond-bold;
+  letter-spacing: 1px;
+}
+
+.app__title:after {
+  background: $dr-green;
+  content: " ";
+  display: block;
+  height: 8px;
+  margin: 5px 0 0 0;
+  width: 40px;
+}
