@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Webpack - React - Redux - Sass",
   "main": "index.jsx",
-  "repository": "https://github.com/johanmaes/scaffold.git",
+  "repository": "https://github.com/vrtnwslab/facebook-live",
   "scripts": {
     "start": "bash start.sh && webpack-dev-server --env=development",
     "build": "webpack --env=production --colors"
