@@ -73,6 +73,14 @@ export default function reducer (
         nextComments: next
       }
     }
+    case 'SELECT_SESSION': {
+      return {
+        ...state,
+        comments: false,
+        nextComments: false,
+        live: false
+      }
+    }
     default:
       return state
   }

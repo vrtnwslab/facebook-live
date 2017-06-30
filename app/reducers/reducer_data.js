@@ -26,7 +26,8 @@ export default function reducer (
         edit: action.payload
       }
     }
-    case 'CLEAR_QUESTION': {
+    case 'CLEAR_QUESTION':
+    case 'SELECT_SESSION': {
       return {
         ...state,
         edit: {

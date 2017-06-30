@@ -30,7 +30,11 @@ export class Home extends Component {
       fetched,
       user
     } = this.props.firebase
+    const {
+      pageId
+    } = this.props.facebook
     if (!user.loggedIn) { this.handleLogIn() }
+    dispatch(actions.fetchLiveVideos(pageId))
     if (realtime && !fetched) {
       dispatch(actions.fetchRealtime(firebaseProject, firebaseApp))
     } else if (!fetched) {
@@ -138,7 +142,8 @@ export class Home extends Component {
 const mapStateToProps = (store) => ({
   'data': store.data,
   'settings': store.settings,
-  'firebase': store.firebase
+  'firebase': store.firebase,
+  'facebook': store.facebook
 })
 
 export default withRouter(connect(mapStateToProps)(Home))

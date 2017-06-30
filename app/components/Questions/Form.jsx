@@ -18,7 +18,6 @@ const QuestionTextField = ({input, meta}) => (
     floatingLabelText='Question'
     fullWidth
     multiLine
-    rows={10}
     {...input}
   />
 )

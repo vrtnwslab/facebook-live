@@ -5,7 +5,7 @@ import {
   fetchFile,
   fetchRealtime,
   fetchOnce,
-  fetchPage,
+  selectFacebookPage,
   fetchLiveVideos,
   fetchVideoComments,
   createNewSession,
@@ -43,7 +43,7 @@ class Data extends Component {
       dispatch
     } = this.props
 
-    dispatch(fetchPage(id))
+    dispatch(selectFacebookPage(id))
   }
 
   handleSelectSession (id) {
@@ -76,14 +76,20 @@ class Data extends Component {
   }
 
   componentWillMount () {
-    const {dispatch} = this.props
+    const {
+      dispatch
+    } = this.props
     const {
       firebaseProject,
       firebaseApp,
       realtime
     } = this.props.settings
+    const {
+      pageId
+    } = this.props.facebook
+
     this.handleLogIn()
-    dispatch(fetchLiveVideos())
+    dispatch(fetchLiveVideos(pageId))
 
     if (datafile) {
       dispatch(fetchFile(datafile))
